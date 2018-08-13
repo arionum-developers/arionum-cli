@@ -104,4 +104,13 @@ class BaseCommand extends Command
             } while (true);
         }
     }
+
+    /**
+     * This command supports output file formats.
+     */
+    protected function supportsOutput()
+    {
+        $this->addOption('output-json', null, InputOption::VALUE_NONE, 'Output to a JSON file.', false);
+        $this->addOption('output-xml', null, InputOption::VALUE_NONE, 'Output to an XML file.', false);
+    }
 }
